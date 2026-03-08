@@ -1,0 +1,120 @@
+# ── AI Tools ──────────────────────────────────────────
+# Claude (Anthropic)
+.claude/
+.claudeignore
+
+# Cursor
+.cursor/
+.cursorignore
+.cursorules
+
+# GitHub Copilot
+.github/copilot-instructions.md
+.copilot/
+
+# OpenAI Codex / ChatGPT
+.codex/
+.openai/
+
+# Windsurf (Codeium)
+.windsurf/
+.codeium/
+
+# Tabnine
+.tabnine/
+
+# Cody (Sourcegraph)
+.cody/
+
+# Aider
+.aider*
+aider.conf.yml
+
+# Continue
+.continue/
+
+# Gemini CLI / Google AI
+.gemini/
+
+# Amazon Q / CodeWhisperer
+.amazonq/
+.aws/sso/
+
+# Devin
+.devin/
+
+# Supermaven
+.supermaven/
+
+# ── OS ─────────────────────────────────────────────────
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ── Editors ────────────────────────────────────────────
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains (WebStorm, IntelliJ…)
+.idea/
+*.iml
+
+# Vim / Neovim
+*.swp
+*.swo
+.netrwhist
+Session.vim
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Sublime Text
+*.sublime-workspace
+
+# ── Node / npm ─────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# ── Environment & secrets ──────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+
+# ── Build output ───────────────────────────────────────
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vite/
+
+# ── Logs ───────────────────────────────────────────────
+*.log
+logs/

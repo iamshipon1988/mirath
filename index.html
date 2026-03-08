@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirath &#x2014; Islamic Inheritance Calculator</title>
+  <meta name="description" content="A simple, step-by-step Islamic inheritance (Fara&#x2019;id) calculator. No login, no ads, completely private." />
+  <meta name="theme-color" content="#FAF7F6" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Mirath" />
+
+  <!-- SageFlow fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="app">
+
+  <!-- ════════════════ WELCOME ════════════════ -->
+  <div id="s-welcome" class="screen active">
+    <div class="wlc-inner">
+
+      <div class="wlc-symbol">
+        <!-- Scale of justice icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v18"/>
+          <path d="M3 9l9-6 9 6"/>
+          <path d="M5 15l-2-6h4l-2 6a2 2 0 0 0 4 0"/>
+          <path d="M17 15l-2-6h4l-2 6a2 2 0 0 0 4 0"/>
+        </svg>
+      </div>
+
+      <div class="wlc-arabic">&#x645;&#x6CC;&#x631;&#x627;&#x62B;</div>
+      <h1 class="wlc-title">Mirath</h1>
+      <p class="wlc-desc">Islamic inheritance calculator based on Fara&#x2019;id rules &#x2014; simple, step-by-step, and private</p>
+
+      <div class="wlc-pills">
+        <span class="wlc-pill">No login</span>
+        <span class="wlc-pill">No ads</span>
+        <span class="wlc-pill">100% private</span>
+        <span class="wlc-pill">Free forever</span>
+      </div>
+
+      <div class="wlc-btn-wrap">
+        <button class="btn-primary" onclick="App.start()">Begin &#x2192;</button>
+      </div>
+
+      <blockquote class="wlc-verse">
+        &#x201C;Allah instructs you regarding your children: for the male, what is equal to the share of two females.&#x201D;
+        <cite>&#x2014; Quran 4:11</cite>
+      </blockquote>
+
+      <a href="https://nimazi.com" class="nimazi-link" target="_blank" rel="noopener">Part of Nimazi</a>
+    </div>
+  </div>
+
+
+  <!-- ════════════════ QUESTION ════════════════ -->
+  <div id="s-question" class="screen">
+    <div class="topbar">
+      <button class="btn-back" onclick="App.back()">&#x2190;</button>
+      <div class="topbar-label" id="q-step-lbl">Step 1 of 15</div>
+      <div class="topbar-space"></div>
+    </div>
+    <div class="pdots" id="q-dots"></div>
+    <div class="q-cat" id="q-cat"></div>
+    <div class="page" id="q-body">
+      <!-- rendered dynamically by app.js -->
+    </div>
+  </div>
+
+
+  <!-- ════════════════ REVIEW ════════════════ -->
+  <div id="s-review" class="screen">
+    <div class="topbar">
+      <button class="btn-back" onclick="App.back()">&#x2190;</button>
+      <div class="topbar-label">Review</div>
+      <div class="topbar-space"></div>
+    </div>
+    <div class="page">
+      <h2 class="review-hd">Review Your Information</h2>
+      <p class="review-sub">Tap any item to edit before calculating</p>
+      <div class="r-list" id="review-list"></div>
+      <div class="summary-card" id="review-summary"></div>
+      <div style="height:10px"></div>
+      <button class="btn-primary" onclick="App.showResult()">Calculate Inheritance &#x2192;</button>
+    </div>
+  </div>
+
+
+  <!-- ════════════════ RESULT ════════════════ -->
+  <div id="s-result" class="screen">
+    <div class="topbar">
+      <button class="btn-back" onclick="App.back()">&#x2190;</button>
+      <div class="topbar-label">Inheritance</div>
+      <div class="topbar-space"></div>
+    </div>
+    <div class="page">
+      <div class="result-hero" id="res-header"></div>
+      <div id="res-body"></div>
+      <div class="result-footer">
+        <button class="btn-outline" onclick="App.restart()">Restart</button>
+        <button class="btn-primary" style="flex:2" onclick="App.share()">Share &#x1F4E4;</button>
+      </div>
+    </div>
+  </div>
+
+</div><!-- #app -->
+
+<script src="app.js"></script>
+</body>
+</html>
